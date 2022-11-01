@@ -1,5 +1,6 @@
-package com.cydeo.pages;
+package com.cydeo.pages.WebTable_Pages;
 
+import com.cydeo.pages.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

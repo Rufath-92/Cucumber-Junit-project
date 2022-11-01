@@ -1,5 +1,6 @@
-package com.cydeo.pages;
+package com.cydeo.pages.WebTable_Pages;
 
+import com.cydeo.pages.BasePage;
 import io.cucumber.java.eo.Se;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -61,13 +62,13 @@ public class WebTableOrderHW_Page extends BasePage {
     @FindBy(xpath = "//input[@type='radio']")
     public List<WebElement> cardType;
 
-    public void chooseCard(String card){
-        for (WebElement each : cardType){
-            if(each.getAttribute("value").equalsIgnoreCase(card)){
-                each.click();
-            }
-        }
-    }
+//    public void chooseCard(String card){
+//        for (WebElement each : cardType){
+//            if(each.getAttribute("value").equalsIgnoreCase(card)){
+//                each.click();
+//            }
+//        }
+//    }
 
     @FindBy(name = "cardNo")
     public WebElement cardNumber;
@@ -78,8 +79,11 @@ public class WebTableOrderHW_Page extends BasePage {
     @FindBy(xpath = "//button[.='Process Order']")
     public WebElement processBtn;
 
-    @FindBy(xpath = "//tbody/tr/td")
-    public WebElement verifyName;
+//    @FindBy(xpath = "//table[@class='table is-fullwidth']/tbody/tr[1]/td[1]")
+//    public WebElement verifyName;
+
+//    @FindBy(xpath = "//tbody/tr/td")
+//    public WebElement verifyName;
 
 
 

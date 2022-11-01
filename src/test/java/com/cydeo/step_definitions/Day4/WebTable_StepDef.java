@@ -1,6 +1,6 @@
 package com.cydeo.step_definitions.Day4;
 
-import com.cydeo.pages.WebTable_Page;
+import com.cydeo.pages.WebTable_Pages.WebTable_Page;
 import com.cydeo.utilities.ConfigReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;

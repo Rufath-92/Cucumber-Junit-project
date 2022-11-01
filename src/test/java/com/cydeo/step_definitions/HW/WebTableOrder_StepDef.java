@@ -1,6 +1,8 @@
 package com.cydeo.step_definitions.HW;
 
-import com.cydeo.pages.WebTableOrderHW_Page;
+import com.cydeo.pages.WebTable_Pages.ViewAllOrderHW_Page;
+import com.cydeo.pages.WebTable_Pages.WebTableOrderHW_Page;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -11,6 +13,7 @@ import org.junit.Assert;
 public class WebTableOrder_StepDef {
 
     WebTableOrderHW_Page webTableOrderHW_page = new WebTableOrderHW_Page();
+    ViewAllOrderHW_Page viewAllOrderHW_page = new ViewAllOrderHW_Page();
 
     @Given("user is already logged in and on order page")
     public void user_is_already_logged_in_and_on_order_page() {
@@ -23,10 +26,10 @@ public class WebTableOrder_StepDef {
         webTableOrderHW_page.setting_product(product);
 
     }
-    @When("user enters quantity {string}")
-    public void user_enters_quantity(String quantity) {
+    @When("user enters quantity {int}")
+    public void user_enters_quantity(Integer quantity) {
         webTableOrderHW_page.quantity.clear();
-        webTableOrderHW_page.quantity.sendKeys(quantity);
+        webTableOrderHW_page.quantity.sendKeys(quantity + "");
     }
     @When("user enters name {string}")
     public void user_enters_name(String customerName) {
@@ -50,7 +53,8 @@ public class WebTableOrder_StepDef {
     }
     @When("user selects card {string}")
     public void user_selects_card_visa(String cardType) {
-        webTableOrderHW_page.chooseCard(cardType);
+      //  webTableOrderHW_page.chooseCard(cardType);
+        BrowserUtils.clickRadioButton(webTableOrderHW_page.cardType,cardType);
     }
     @When("user enters  card number {string}")
     public void user_enters_card_number(String cardNumber) {
@@ -67,7 +71,7 @@ public class WebTableOrder_StepDef {
     }
     @Then("user should see {string} in first row of the web table")
     public void user_should_see_in_first_row_of_the_web_table(String verificationName) {
-       Assert.assertEquals(verificationName,webTableOrderHW_page.verifyName.getText());
+       Assert.assertEquals(verificationName,viewAllOrderHW_page.verifyName.getText());
     }
 
 
