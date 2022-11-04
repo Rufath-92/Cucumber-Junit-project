@@ -1,5 +1,5 @@
 @Login-test
-Feature: Library app login feature
+Feature:Library app login feature
   User Story:
   As a user, I should be able to login with correct credentials to different accounts and
    dashboard should be displayed.
@@ -10,21 +10,21 @@ Feature: Library app login feature
     Given user on the library login page
 
  # @smoke @librarian @employee
-  Scenario: Login as a librarian
+  Scenario:Login as a librarian
     # Given user on the library login page
     When user enters librarian username
     And user enters librarian password
     Then user should see dashboard
 
    # @smoke @student
-    Scenario: Login as a student
+    Scenario:Login as a student
      # Given user on the library login page
       When user enters student username
       And user enters student password
       Then user should see dashboard
 
  # @smoke @admin @employee
-  Scenario: Login as a admin
+  Scenario:Login as a admin
    # Given user on the library login page
     When user enters admin username
     And user enters admin password

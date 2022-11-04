@@ -1,4 +1,4 @@
-
+@Netflix
 Feature: Movie suggestion feature
   As a user I should be able to get movies according to my preference
 
@@ -19,7 +19,7 @@ Feature: Movie suggestion feature
       | adventure |
     When I go to homepage
     Then I should get right recommendation
-  @Netflix
+
   Scenario: Movie search datatable map
     Given I like below favorite movie with certain type
 

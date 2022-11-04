@@ -1,11 +1,11 @@
-@Calculator-DDT_testing
+@Calculator_DDT_testing
 Feature: Calculator should work for simple math
 
   As a user I should be able to do simple math
 
   Scenario Outline: Should be able to add two numbers
     Given Calculator is open
-    When I add <firstNumber>  with <secondNumber>
+    When I add <firstNumber> with <secondNumber>
     Then I should get <finalNumber>
 
 

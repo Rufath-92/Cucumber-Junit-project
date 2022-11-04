@@ -1,3 +1,4 @@
+@Calculate
 Feature: Calculator should work for simple math
 
   As a user I should be able to do simple math

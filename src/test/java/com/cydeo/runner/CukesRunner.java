@@ -11,11 +11,12 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports.html",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
                 "rerun:target/rerun.txt"
-        }, //
+        },
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,
-        tags = "@Web-Table-HW"//"@smoke and @employee and not admin"
+        tags = " " //"@smoke and @employee and not admin"
+       // publish = true
 )
 
 public class CukesRunner {

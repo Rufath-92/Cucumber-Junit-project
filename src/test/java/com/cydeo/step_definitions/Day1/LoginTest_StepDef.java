@@ -47,4 +47,9 @@ public class LoginTest_StepDef {
     public void userEntersAdminPassword() {
         System.out.println("user enters admin password");
     }
+
+    @Given("user is on the library login page")
+    public void userIsOnTheLibraryLoginPage() {
+        System.out.println("User is on  the login page");
+    }
 }

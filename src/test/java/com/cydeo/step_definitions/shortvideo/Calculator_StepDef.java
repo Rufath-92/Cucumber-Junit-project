@@ -12,7 +12,7 @@ public class Calculator_StepDef {
         public void calculator_is_open() {
                 System.out.println("This is from Given");
         }
-        @When("I add {int}  with {int}")
+        @When("I add {int} with {int}")
         public void i_add_with(int num1, int num2) {
                 System.out.println("When I add " + num1 + " with " + num2);
                 actualResult = num1 + num2;
